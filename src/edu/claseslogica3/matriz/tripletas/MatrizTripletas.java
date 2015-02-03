@@ -6,7 +6,6 @@
 
 package edu.claseslogica3.matriz.tripletas;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -52,7 +51,7 @@ public class MatrizTripletas {
         
         Tripleta primera = new Tripleta(nFilas, nColumnas, nFilas);
         this.Mat.add(primera);
-        int k = 1;        
+        int k = 0;        
         for (int i = 0; i < nFilas; i++) {
             for (int j = 0; j < nColumnas; j++) {
                 int val = MatDispersaOriginal[i][j];
@@ -176,7 +175,7 @@ public class MatrizTripletas {
                 System.out.println("revertir "+tripleta);
                 int fila = tripleta.getFila();
                 int columna = tripleta.getColumna();
-                res[fila-1][columna-1] = tripleta.getValor();
+                res[fila][columna] = tripleta.getValor();
             }
         }
         
@@ -219,13 +218,32 @@ public class MatrizTripletas {
     
     
     //TODO intercambiar filas
+    public void intercambiaFilas(int i, int j)
+    {}
+    
     
     //TODO multiplicar por un escalar
+    public void multiplicaEscalar(int escalar)
+    {}
+    
     
     //TODO determinante
+    public int determinante()
+    {
+        int determinante = 0;
+        
+        return determinante;
+        
+    }
     
     //TODO remplazar una fila
+    public void reemplazaFila(int[] filaNueva)
+    {}
     
+    //TODO multiplicar una fila por un escalar
+    public void multiplicaxEscalar(int escalar)
+    {
+    }
     
     //retornar una fila
     public List<Tripleta> getFila(int nFila){

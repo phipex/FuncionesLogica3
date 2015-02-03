@@ -75,12 +75,13 @@ public class MatrizTripletasTest {
     
     @Test
     public void testConstruyeVectorLimitesFila(){
+        System.out.println("testConstruyeVectorLimitesFila");
         int[][] mock = matrizDispersa3x3();
         imprimeMatriz(mock);
         MatrizTripletas matriz = new MatrizTripletas(mock);
         matriz.imprimirConsola();
         int[] vectorLimites = matriz.contruyeVectorDeLimitesFila();
-        
+        //TODO construir fila de respuesta 
         for (int i = 0; i < vectorLimites.length; i++) {
             int j = vectorLimites[i];
             System.out.println("fila"+i+" limite"+j);
@@ -95,7 +96,7 @@ public class MatrizTripletasTest {
         MatrizTripletas matriz = new MatrizTripletas(mock);
         matriz.imprimirConsola();
         int[] vectorLimites = matriz.contruyeVectorDeLimitesColumna();
-        
+        //TODO costruir fila de respuesta
         for (int i = 0; i < vectorLimites.length; i++) {
             int j = vectorLimites[i];
             System.out.println("columna"+i+" limite"+j);
@@ -116,7 +117,7 @@ public class MatrizTripletasTest {
         transversa.imprimirConsola();
         int[][] transpuesta = transversa.revertir();
         imprimeMatriz(transpuesta);
-        
+        //TODO construir transpuesta para comparar
     
     }
     
@@ -164,6 +165,174 @@ public class MatrizTripletasTest {
         res[2][2]=0;
         
         return res;
+    }
+
+    /**
+     * Test of asignaTripleta method, of class MatrizTripletas.
+     */
+    @Test
+    public void testAsignaTripleta() {
+        System.out.println("asignaTripleta");
+        Tripleta tripleta = null;
+        int posicion = 0;
+        MatrizTripletas instance = null;
+        instance.asignaTripleta(tripleta, posicion);
+        // TODO construir matriz para comparar
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of retornNumeroTripletas method, of class MatrizTripletas.
+     */
+    @Test
+    public void testRetornNumeroTripletas() {
+        System.out.println("retornNumeroTripletas");
+        MatrizTripletas instance = null;
+        int expResult = 0;
+        int result = instance.retornNumeroTripletas();
+        assertEquals(expResult, result);
+        // TODO corregir este metodo para que use mock
+        fail("The test case is a prototype.");
+    }
+
+    
+
+    /**
+     * Test of contruyeVectorDeLimitesFila method, of class MatrizTripletas.
+     */
+    @Test
+    public void testContruyeVectorDeLimitesFila() {
+        System.out.println("contruyeVectorDeLimitesFila");
+        MatrizTripletas instance = null;
+        int[] expResult = null;
+        int[] result = instance.contruyeVectorDeLimitesFila();
+        assertArrayEquals(expResult, result);
+        // TODO construir array con los datos esperados
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of contruyeVectorDeLimitesColumna method, of class MatrizTripletas.
+     */
+    @Test
+    public void testContruyeVectorDeLimitesColumna() {
+        System.out.println("contruyeVectorDeLimitesColumna");
+        MatrizTripletas instance = null;
+        int[] expResult = null;
+        int[] result = instance.contruyeVectorDeLimitesColumna();
+        assertArrayEquals(expResult, result);
+        // TODO construir array con los datos esperados
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of revertir method, of class MatrizTripletas.
+     */
+    @Test
+    public void testRevertir() {
+        System.out.println("revertir");
+        MatrizTripletas instance = null;
+        int[][] expResult = null;
+        int[][] result = instance.revertir();
+        assertArrayEquals(expResult, result);
+        // TODO construir matriz para comparar
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of contarDatos method, of class MatrizTripletas.
+     */
+    @Test
+    public void testContarDatos() {
+        System.out.println("contarDatos");
+        int[][] MatDispersaOriginal = null;
+        int expResult = 0;
+        int result = MatrizTripletas.contarDatos(MatDispersaOriginal);
+        assertEquals(expResult, result);
+        // TODO corregir este metodo
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of intercambiaFilas method, of class MatrizTripletas.
+     */
+    @Test
+    public void testIntercambiaFilas() {
+        System.out.println("intercambiaFilas");
+        int i = 0;
+        int j = 0;
+        MatrizTripletas instance = null;
+        instance.intercambiaFilas(i, j);
+        // TODO contruir matriz con la fila intercambiada para comparar
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of multiplicaEscalar method, of class MatrizTripletas.
+     */
+    @Test
+    public void testMultiplicaEscalar() {
+        System.out.println("multiplicaEscalar");
+        int escalar = 0;
+        MatrizTripletas instance = null;
+        instance.multiplicaEscalar(escalar);
+        // TODO contruir matriz con la fila multiplicada para comparar
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of determinante method, of class MatrizTripletas.
+     */
+    @Test
+    public void testDeterminante() {
+        System.out.println("determinante");
+        MatrizTripletas instance = null;
+        int expResult = 0;
+        int result = instance.determinante();
+        assertEquals(expResult, result);
+        // TODO determinar el determinante
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of reemplazaFila method, of class MatrizTripletas.
+     */
+    @Test
+    public void testReemplazaFila() {
+        System.out.println("reemplazaFila");
+        int[] filaNueva = null;
+        MatrizTripletas instance = null;
+        instance.reemplazaFila(filaNueva);
+        // TODO crear la matriz con la fila reemplazada 
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of multiplicaxEscalar method, of class MatrizTripletas.
+     */
+    @Test
+    public void testMultiplicaxEscalar() {
+        System.out.println("multiplicaxEscalar");
+        int escalar = 0;
+        MatrizTripletas instance = null;
+        instance.multiplicaxEscalar(escalar);
+        // TODO crear la matriz con la fila multiplicada
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getFila method, of class MatrizTripletas.
+     */
+    @Test
+    public void testGetFila() {
+        System.out.println("getFila");
+        int nFila = 0;
+        MatrizTripletas instance = null;
+        List<Tripleta> expResult = null;
+        List<Tripleta> result = instance.getFila(nFila);
+        assertEquals(expResult, result);
+        // TODO crear la tripleta a evaluar
+        fail("The test case is a prototype.");
     }
     
 }
